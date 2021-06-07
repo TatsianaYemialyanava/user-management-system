@@ -17,9 +17,6 @@
 		<h1>User management system</h1>
 	</div>
 	
-	<a href="Controller?command=localization&language=en&commandRedirect=Controller%3Fcommand%3Dgotomainpage"><spring:message code="en.button" /></a><br>
-	<a href="Controller?command=localization&language=ru&commandRedirect=Controller%3Fcommand%3Dgotomainpage"><spring:message code="ru.button" /></a>
-	
 	<div align="left">
 		<form action="logout" method="POST">
 			<a href="#" onclick="this.parentNode.submit()"><spring:message code="main.logout" /></a>

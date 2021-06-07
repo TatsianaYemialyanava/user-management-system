@@ -33,9 +33,6 @@ input[type=submit] {
 	<div class="header" align="center" style="font-size: 200%">
 		<h1>User management system</h1>
 	</div>
-
-	<a href="AnonymousController?command=localization&language=en&commandRedirect=AnonymousController%3Fcommand%3Dgotoindexpage"><spring:message code="en.button" /></a><br>
-	<a href="AnonymousController?command=localization&language=ru&commandRedirect=AnonymousController%3Fcommand%3Dgotoindexpage"><spring:message code="ru.button" /></a><br>
 	
 	<c:if test="${param.message != 'null'}">
 		<div align="center">
