@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div class="header" align="center" style="font-size: 200%">
-		<h1>The local news</h1>
+		<h1>User management system</h1>
 	</div>
 	
 	<a href="AnonymousController?command=localization&language=en&commandRedirect=AnonymousController%3Fcommand%3Dgo_to_error_page"><spring:message code="en.button" /></a><br>

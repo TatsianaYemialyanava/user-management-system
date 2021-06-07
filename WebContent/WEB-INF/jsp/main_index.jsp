@@ -31,7 +31,7 @@ input[type=submit] {
 </head>
 <body>
 	<div class="header" align="center" style="font-size: 200%">
-		<h1>The local news</h1>
+		<h1>User management system</h1>
 	</div>
 
 	<a href="AnonymousController?command=localization&language=en&commandRedirect=AnonymousController%3Fcommand%3Dgotoindexpage"><spring:message code="en.button" /></a><br>

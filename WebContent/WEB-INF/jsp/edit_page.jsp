@@ -29,7 +29,7 @@ input[type=submit] {
 <body>
 
 	<div class="header" align="center" style="font-size: 200%">
-		<h1>The local news</h1>
+		<h1>User management system</h1>
 	</div>
 	
 	<a href="AdminController?command=localization&language=en&commandRedirect=AdminController%3Fcommand%3Dgo_to_edit_page%26id=${param['id']}"><spring:message code="en.button" /></a><br>
