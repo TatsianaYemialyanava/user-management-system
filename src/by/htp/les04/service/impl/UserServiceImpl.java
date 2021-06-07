@@ -92,4 +92,17 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 		}
 		return users;
 	}
+
+	@Override
+	public User getOne(int idUser) throws ServiceException {
+		User oneUser = null;
+
+		try {
+			oneUser = userDAO.getOne(idUser);
+
+		}catch(DAOException e) {
+			throw new ServiceException(e.getMessage(), e);
+		}
+		return oneUser;
+	}
 }

@@ -29,7 +29,7 @@ public class SQLUserDAO implements UserDAO {
 		user =(User) theQuery.getSingleResult();
 		return user;
 	}
-	
+
 	@Override
 	public User loadUser(String login) throws DAOException {
 		Session currentSession = sessionFactory.getCurrentSession();
@@ -38,7 +38,7 @@ public class SQLUserDAO implements UserDAO {
 		user =(User) theQuery.getSingleResult();
 		return user;
 	}
-	
+
 	@Override
 	public void createUser(User user) throws DAOException {
 		Session currentSession = sessionFactory.getCurrentSession();
@@ -52,5 +52,12 @@ public class SQLUserDAO implements UserDAO {
 		Query<User> theQuery = currentSession.createQuery("from User", User.class);
 		List<User> users = theQuery.getResultList();
 		return users;
+	}
+
+	@Override
+	public User getOne(int idUser) throws DAOException {
+		Session currentSession = sessionFactory.getCurrentSession();
+		User user = currentSession.get(User.class, idUser);
+		return user;
 	}
 }

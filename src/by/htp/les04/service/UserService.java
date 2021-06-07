@@ -11,4 +11,6 @@ public interface UserService {
 	void createUser(User userInfo) throws ServiceException;
 
 	List<User> takeAll() throws ServiceException;
+
+	User getOne(int idUser) throws ServiceException;
 }

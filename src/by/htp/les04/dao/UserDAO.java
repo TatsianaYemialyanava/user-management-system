@@ -13,4 +13,6 @@ public interface UserDAO {
 	void createUser(User userInfo) throws DAOException;
 
 	List<User> all() throws DAOException;
+
+	User getOne(int idUser) throws DAOException;
 }
