@@ -74,20 +74,20 @@
 					<td>
 						<form action="AdminController" method="get">
 							<input type="hidden" name="command" value="go_to_edit_page" /> <input
-								type="hidden" name="id" value="${param['id']}">
+								type="hidden" name="idUser" value="${param['idUser']}">
 							<button>
 								<spring:message code="fullNews.button.edit" />
 							</button>
 						</form>
 					</td>
 					<td>
-						<form action="AdminController" method="get">
+						<!-- <form action="AdminController" method="get">
 							<input type="hidden" name="command" value="delete_news" /> <input
-								type="hidden" name="id" value="${param['id']}">
+								type="hidden" name="id" value="${param['idUser']}">
 							<button>
 								<spring:message code="fullNews.button.delete" />
 							</button>
-						</form>
+						</form> -->
 					</td>
 				</sec:authorize>
 			</tr>

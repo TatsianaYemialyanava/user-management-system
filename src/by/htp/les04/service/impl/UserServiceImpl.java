@@ -105,4 +105,15 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 		}
 		return oneUser;
 	}
+
+	@Override
+	public void updatePersonalInformation(int idUser, String name, String surname, String email, String login,
+			String password, String role) throws ServiceException {
+		try {
+			userDAO.updatePersonalInformation(idUser, name, surname, email, login, password, role);
+
+		}catch(DAOException e) {
+			throw new ServiceException(e.getMessage(), e);
+		}	
+	}
 }

@@ -1,14 +1,12 @@
 package by.htp.les04.dao.impl;
 
 import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
 import by.htp.les04.bean.News;
 import by.htp.les04.bean.User;
 import by.htp.les04.dao.DAOException;
@@ -59,5 +57,22 @@ public class SQLUserDAO implements UserDAO {
 		Session currentSession = sessionFactory.getCurrentSession();
 		User user = currentSession.get(User.class, idUser);
 		return user;
+	}
+
+	@Override
+	public void updatePersonalInformation(int idUser, String name, String surname, String email, String login,
+			String password, String role) throws DAOException {
+		Session currentSession = sessionFactory.getCurrentSession();
+		User user = new User();
+		user.setIdUser(idUser);
+		user.setName(name);
+		user.setSurname(surname);
+		user.setEmail(email);
+		user.setLogin(login);
+		user.setPassword(password);
+		user.setRole(role);
+		//user.setDate(java.time.LocalDateTime.now());
+		//user.setStatus("active");
+		currentSession.saveOrUpdate(user);
 	}
 }

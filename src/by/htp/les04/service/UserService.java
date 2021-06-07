@@ -13,4 +13,6 @@ public interface UserService {
 	List<User> takeAll() throws ServiceException;
 
 	User getOne(int idUser) throws ServiceException;
+
+	void updatePersonalInformation(int idUser, String name, String surname, String email, String login, String password, String role) throws ServiceException;
 }

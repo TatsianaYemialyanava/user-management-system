@@ -9,8 +9,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import by.htp.les04.bean.News;
+import by.htp.les04.bean.User;
 import by.htp.les04.service.NewsService;
 import by.htp.les04.service.ServiceException;
+import by.htp.les04.service.UserService;
+
 import static by.htp.les04.controller.command.spring.ControllerLevelConstant.*;
 
 @Controller
@@ -19,17 +22,23 @@ public class SaveEdittedInformation {
 
 	@Autowired
 	private NewsService newsService;
+	@Autowired
+	private UserService userService;
 
 	@RequestMapping(params = {"command=save_new_information"})
-	public String execute(@ModelAttribute("singleNews") News news, Model theModel, Principal principal) throws ServletException, IOException, ServiceException {
+	public String execute(@ModelAttribute("singleNews") User user, Model theModel, Principal principal) throws ServletException, IOException, ServiceException {
 
-		int idNews = news.getId();
-		String titleNews = news.getTitle();
-		String briefNews = news.getBrief();
-		String contentNews = news.getContent();
+		int idUser = user.getIdUser();
+		String name = user.getName();
+		String surname = user.getSurname();
+		String email = user.getEmail();
+		String login = user.getLogin();
+		String password = user.getPassword();
+		String role = user.getRole();
 
-		newsService.updateNews(idNews, titleNews, briefNews, contentNews);
-		theModel.addAttribute(MESSAGE, "news has been saved");
-		return REDIRECT_PREFIX + REDIRECT_FROM_SAVE_EDDITED_INFORMATION_TO_GO_TO_FULL_NEWS_PAGE + idNews;
+		userService.updatePersonalInformation(idUser, name, surname, email, login, password, role);
+		
+		theModel.addAttribute(MESSAGE, "user details has been saved");
+		return REDIRECT_PREFIX + REDIRECT_FROM_SAVE_EDDITED_INFORMATION_TO_GO_TO_FULL_NEWS_PAGE + idUser;
 	}
 }
