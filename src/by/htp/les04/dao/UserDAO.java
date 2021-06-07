@@ -1,5 +1,7 @@
 package by.htp.les04.dao;
 
+import java.util.List;
+
 import by.htp.les04.bean.User;
 
 public interface UserDAO {
@@ -9,4 +11,6 @@ public interface UserDAO {
 	User loadUser (String login) throws DAOException;
 
 	void createUser(User userInfo) throws DAOException;
+
+	List<User> all() throws DAOException;
 }

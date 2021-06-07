@@ -46,12 +46,12 @@
 			<c:forEach var="n" items="${requestScope.news}">
 				<tr>
 					<td><font size="16" color="black" align="center"> 
-					<c:out value="${n.title}" />
+					<c:out value="${n.name}" />
 							<div style="font-size: 40%">
-								<c:out value="${n.brief}" />
+								<c:out value="${n.surname}" />
 								<br />
 								<div align="right">
-									<a href="Controller?command=go_to_full_news_page&id=<c:out value="${n.id}"/>">
+									<a href="Controller?command=go_to_full_news_page&id=<c:out value="${n.idUser}"/>">
 										<spring:message code="main.fullNews" />
 									</a>
 
