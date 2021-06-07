@@ -63,8 +63,5 @@
 		</table>
 	</div>
 
-	<div class="footer" style="height: 10%; position: absolute; bottom: 0px;">
-		<h2><spring:message code="index.contacts" />: tatsiana88_88@tut.by</h2>
-	</div>
 </body>
 </html>

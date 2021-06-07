@@ -60,23 +60,8 @@ input[type=submit] {
 	<br />
 
 	<div align="center">
-		<a href="AnonymousController?command=registration"><spring:message code="index.registration" /></a>
-		<table border="2">
-			<c:forEach var="n" items="${requestScope.news}">
-				<tr>
-					<td><font size="16" color="black" align="center"> <c:out value="${n.title}" />
-							<div style="font-size: 40%">
-								<c:out value="${n.brief}" />
-							</div>
-					</font></td>
-				</tr>
-			</c:forEach>
-		</table>
+		<a href="AnonymousController?command=registration"><spring:message code="index.registration" /></a>	
 	</div>
-	<div class="footer" style="height: 10%; position: absolute; bottom: 0px;">
-		<h2>
-			<spring:message code="index.contacts" />: tatsiana88_88@tut.by
-		</h2>
-	</div>
+
 </body>
 </html>
