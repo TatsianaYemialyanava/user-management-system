@@ -33,9 +33,6 @@ input[type=submit] {
 		<h1>User management system</h1>
 	</div>
 	
-	<a href="AnonymousController?command=localization&language=en&commandRedirect=AnonymousController%3Fcommand%3Dregistration"><spring:message code="en.button" /></a><br>
-	<a href="AnonymousController?command=localization&language=ru&commandRedirect=AnonymousController%3Fcommand%3Dregistration"><spring:message code="ru.button" /></a><br>
-
 	<c:if test="${param.message != 'null'}">
 		<div align="center">
 			<font color="green"> <c:out value="${param.message}" />
@@ -46,7 +43,7 @@ input[type=submit] {
 	<br />
 	<div id="container" align="center">
 
-		<form:form action="AnonymousController?command=savenewuser" modelAttribute="user" method="POST">
+		<form:form action="AdminController?command=savenewuser" modelAttribute="user" method="POST">
 			<form:hidden path="idUser" />
 
 			<label><spring:message code="registration.name" />:</label><br>
@@ -78,17 +75,11 @@ input[type=submit] {
 
 		</form:form>
 	
-	<div style=""></div>
-
-	<p>
-		<a href="AnonymousController?command=gotoindexpage"><spring:message code="fullNews.button.backToMainPage" /></a>
-	</p>
-	</div>
-
-	<div class="footer" style="height: 10%; position: absolute; bottom: 0px;">
-		<h2>
-			<spring:message code="index.contacts" />: tatsiana88_88@tut.by
-		</h2>
+		<div style=""></div>
+			<form action="Controller" method="get">
+      		<input type="hidden" name="command" value="gotomainpage" />
+			<button><spring:message code="fullNews.button.backToMainPage" /></button>
+			</form>
 	</div>
 
 </body>

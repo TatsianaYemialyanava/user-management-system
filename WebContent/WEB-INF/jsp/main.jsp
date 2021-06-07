@@ -36,6 +36,14 @@
 			</font>
 		</div>
 	</c:if>
+	
+	<sec:authorize access="hasRole('admin')">
+		<div align="center">
+			<a href="AdminController?command=registration"><spring:message code="index.registration" /></a>	
+		</div>
+	</sec:authorize>
+	
+	<br>
 
 	<div align="center">
 

@@ -54,11 +54,5 @@ input[type=submit] {
 		<input type="submit" value="<spring:message code='index.send' />" />
 	</form:form>
 
-	<br />
-
-	<div align="center">
-		<a href="AnonymousController?command=registration"><spring:message code="index.registration" /></a>	
-	</div>
-
 </body>
 </html>

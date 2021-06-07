@@ -10,7 +10,7 @@ import by.htp.les04.bean.User;
 import static by.htp.les04.controller.command.spring.ControllerLevelConstant.*;
 
 @Controller
-@RequestMapping("/AnonymousController")
+@RequestMapping("/AdminController")
 public class GoToRegistrationPage {
 
 	@RequestMapping(params = {"command=registration"})
