@@ -1,4 +1,4 @@
-package by.htp.les04.controller.command.spring;
+package by.htp.les04.controller;
 
 import java.io.IOException;
 import java.security.Principal;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import by.htp.les04.bean.UserAccount;
-import static by.htp.les04.controller.command.spring.ControllerLevelConstant.*;
+import static by.htp.les04.controller.ControllerLevelConstant.*;
 
 @Controller
 @RequestMapping("/AdminController")

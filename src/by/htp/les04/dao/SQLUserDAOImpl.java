@@ -1,4 +1,4 @@
-package by.htp.les04.dao.impl;
+package by.htp.les04.dao;
 
 import java.util.List;
 import org.hibernate.Session;
@@ -13,7 +13,7 @@ import by.htp.les04.dao.UserDAO;
 
 @Repository
 @Transactional()
-public class SQLUserDAO implements UserDAO {
+public class SQLUserDAOImpl implements UserDAO {
 
 	@Autowired
 	private SessionFactory sessionFactory;

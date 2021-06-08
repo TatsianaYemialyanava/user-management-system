@@ -1,4 +1,5 @@
-package by.htp.les04.service.impl.validatorIncomingData;
+package by.htp.
+les04.service.validatorIncomingData;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
