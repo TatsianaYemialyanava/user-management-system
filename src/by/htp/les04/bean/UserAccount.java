@@ -185,7 +185,7 @@ public class UserAccount implements Serializable {
 				"login: " + this.login + "\n" +
 				"password: ***" + "\n" + 
 				"role: " + this.role + "\n" +
-				"status: " + (this.status? "lock": "unlock");
+				"status: " + (this.status? "inactive": "active");
 	}
 
 	

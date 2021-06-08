@@ -72,8 +72,8 @@ input[type=submit] {
        			</form:select>  <br><br>
        		Status <br>:  
        			<form:select path="status">  
-     		    <form:option value="true" label="Lock"/>  
-       			<form:option value="false" label="Unlock"/>  
+     		    <form:option value="true" label="Inactive"/>  
+       			<form:option value="false" label="Active"/>  
        			</form:select> <br><br>
        				
        		<label></label>

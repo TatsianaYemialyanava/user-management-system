@@ -53,10 +53,10 @@
 		Role: <c:out value="${n.role}" /> <br> 
 		Status:	<c:choose>
    			 		<c:when test="${!n.status}">
-   				 		<c:out value="unlock"/>
+   				 		<c:out value="active"/>
    		 			</c:when>
    		  			<c:otherwise>
-    					<c:out value="lock"/>
+    					<c:out value="inactive"/>
    			 		</c:otherwise>
 				</c:choose><br>
 		Date: <c:out value="${n.date}" /> <br>
