@@ -8,7 +8,6 @@ public interface ControllerLevelConstant {
 	String PASSWORD_PARAM = "password";
 	String NAME_PARAM = "name";
 	String SURNAME_PARAM = "surname";
-	String EMAIL_PARAM = "email";
 	
 	//ATTRIBUTES
 	String SINGLE_USER_ATTRIBUTE = "singleUser";

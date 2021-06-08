@@ -48,7 +48,6 @@
 
 		Name: <c:out value="${n.name}" /> <br> 
 		Surname: <c:out value="${n.surname}" /> <br> 
-		Email: <c:out value="${n.email}" /> <br> 
 		Login: <c:out value="${n.login}" /> <br> 
 		Password: <c:out value="${n.password}" /> <br> 
 		Role: <c:out value="${n.role}" /> <br> 

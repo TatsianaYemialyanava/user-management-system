@@ -6,11 +6,10 @@ import java.util.regex.Pattern;
 public class ValidationDataForRegistration {
 	private static Pattern patternN = Pattern.compile("[A-Za-zА-ЯЁёа-я]+");
 	private static Pattern patternS = Pattern.compile("[A-Za-zА-ЯЁёа-я]+");
-	private static Pattern patternE = Pattern.compile("[-A-Za-z1-9@_\\.]+");
 	private static Pattern patternL = Pattern.compile("[A-Za-z1-9!\\.?_]+");
 	private static Pattern patternP = Pattern.compile("[-A-Za-z1-9!@#$%^&*()]+");
 
-	public static boolean validateDataForRegistration(String name, String surname, String email, String login, String password) {
+	public static boolean validateDataForRegistration(String name, String surname, String login, String password) {
 
 		boolean result = true;
 
@@ -35,18 +34,6 @@ public class ValidationDataForRegistration {
 
 		Matcher matcherS = patternS.matcher(surname);
 		if (!matcherS.matches()) {
-			result = false;
-		}
-
-		if (email==null || "".equals(email)) {
-			result = false;
-		}
-		if (email.trim().isEmpty()) {
-			result = false;
-		}
-
-		Matcher matcherE = patternE.matcher(email);
-		if (!matcherE.matches()) {
 			result = false;
 		}
 

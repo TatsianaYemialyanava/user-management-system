@@ -56,11 +56,6 @@ input[type=submit] {
 
 			<br>
 
-			<label><spring:message code="registration.email" />:</label><br>
-			<form:input path="email" />
-
-			<br>
-
 			<label><spring:message code="registration.login" />:</label><br>
 			<form:input path="login" />
 

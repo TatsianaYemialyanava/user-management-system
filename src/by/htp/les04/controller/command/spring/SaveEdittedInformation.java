@@ -27,12 +27,11 @@ public class SaveEdittedInformation {
 		int idUser = user.getIdUser();
 		String name = user.getName();
 		String surname = user.getSurname();
-		String email = user.getEmail();
 		String login = user.getLogin();
 		String password = user.getPassword();
 		String role = user.getRole();
 
-		userService.updatePersonalInformation(idUser, name, surname, email, login, password, role);
+		userService.updatePersonalInformation(idUser, name, surname, login, password, role);
 		
 		theModel.addAttribute(MESSAGE, "user details has been saved");
 		return REDIRECT_PREFIX + REDIRECT_FROM_SAVE_EDDITED_INFORMATION_TO_GO_TO_FULL_USER_INFORMATION_PAGE + idUser;

@@ -63,11 +63,10 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
 		String name = userInfo.getName();
 		String surname = userInfo.getSurname();
-		String email = userInfo.getEmail();
-		String login = userInfo.getEmail();
+		String login = userInfo.getLogin();
 		String password = userInfo.getPassword();
 
-		if (!validateDataForRegistration(name, surname, email, login, password)) {
+		if (!validateDataForRegistration(name, surname, login, password)) {
 			throw new ServiceException("incorrect data entered");
 		}
 
@@ -104,10 +103,10 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 	}
 
 	@Override
-	public void updatePersonalInformation(int idUser, String name, String surname, String email, String login,
+	public void updatePersonalInformation(int idUser, String name, String surname, String login,
 			String password, String role) throws ServiceException {
 		try {
-			userDAO.updatePersonalInformation(idUser, name, surname, email, login, password, role);
+			userDAO.updatePersonalInformation(idUser, name, surname, login, password, role);
 
 		}catch(DAOException e) {
 			throw new ServiceException(e.getMessage(), e);

@@ -59,14 +59,13 @@ public class SQLUserDAO implements UserDAO {
 	}
 
 	@Override
-	public void updatePersonalInformation(int idUser, String name, String surname, String email, String login,
+	public void updatePersonalInformation(int idUser, String name, String surname, String login,
 			String password, String role) throws DAOException {
 		Session currentSession = sessionFactory.getCurrentSession();
 		User user = new User();
 		user.setIdUser(idUser);
 		user.setName(name);
 		user.setSurname(surname);
-		user.setEmail(email);
 		user.setLogin(login);
 		user.setPassword(password);
 		user.setRole(role);
