@@ -14,10 +14,7 @@
 	<div class="header" align="center" style="font-size: 200%">
 		<h1>User management system</h1>
 	</div>
-	
-	<a href="AnonymousController?command=localization&language=en&commandRedirect=AnonymousController%3Fcommand%3Dgo_to_error_page"><spring:message code="en.button" /></a><br>
-	<a href="AnonymousController?command=localization&language=ru&commandRedirect=AnonymousController%3Fcommand%3Dgo_to_error_page"><spring:message code="ru.button" /></a><br>
-	
+
 	<div align="center">
 		<h1>
 			
@@ -39,12 +36,6 @@
 		<a href="AnonymousController?command=gotoindexpage"> 
 			<spring:message code="exceptionPage.backToMainPage" />
 		</a>
-	</div>
-
-	<div class="footer" style="height: 10%; position: absolute; bottom: 0px;">
-		<h2>
-			<spring:message code="index.contacts" />: tatsiana88_88@tut.by
-		</h2>
 	</div>
 
 </body>

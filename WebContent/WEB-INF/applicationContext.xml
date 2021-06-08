@@ -30,7 +30,7 @@
 	</mvc:interceptors>
 	
   	<bean class="org.springframework.context.support.ResourceBundleMessageSource" id="messageSource"> 
-		<property name="basenames" value="localization/interface" />
+		<property name="basenames" value="language/default" />
 	</bean>
 	
 	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver"/>
