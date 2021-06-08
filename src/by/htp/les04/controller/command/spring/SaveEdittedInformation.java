@@ -8,10 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import by.htp.les04.bean.User;
+import by.htp.les04.bean.UserAccount;
 import by.htp.les04.service.ServiceException;
 import by.htp.les04.service.UserService;
-
 import static by.htp.les04.controller.command.spring.ControllerLevelConstant.*;
 
 @Controller
@@ -22,7 +21,7 @@ public class SaveEdittedInformation {
 	private UserService userService;
 
 	@RequestMapping(params = {"command=save_new_information"})
-	public String execute(@ModelAttribute("singleUser") User user, Model theModel, Principal principal) throws ServletException, IOException, ServiceException {
+	public String execute(@ModelAttribute("singleUser") UserAccount user, Model theModel, Principal principal) throws ServletException, IOException, ServiceException {
 
 		int idUser = user.getIdUser();
 		String name = user.getName();

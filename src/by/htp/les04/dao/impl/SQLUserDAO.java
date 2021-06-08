@@ -7,7 +7,7 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import by.htp.les04.bean.User;
+import by.htp.les04.bean.UserAccount;
 import by.htp.les04.dao.DAOException;
 import by.htp.les04.dao.UserDAO;
 
@@ -19,47 +19,47 @@ public class SQLUserDAO implements UserDAO {
 	private SessionFactory sessionFactory;
 
 	@Override
-	public User authorization(String login, String password) throws DAOException {
+	public UserAccount authorization(String login, String password) throws DAOException {
 		Session currentSession = sessionFactory.getCurrentSession();
-		Query theQuery = currentSession.createQuery("from User where login = '" + login + "' and password = '" + password + "'", User.class);
+		Query theQuery = currentSession.createQuery("from UserAccount where login = '" + login + "' and password = '" + password + "'", UserAccount.class);
 		//"from News where status = 'active'", News.class
 		System.out.println("kon");
-		User user = new User(); 
-		user =(User) theQuery.getSingleResult();
+		UserAccount user = new UserAccount(); 
+		user =(UserAccount) theQuery.getSingleResult();
 		return user;
 	}
 
 	@Override
-	public User loadUser(String login) throws DAOException {
+	public UserAccount loadUser(String login) throws DAOException {
 		System.out.println("load user dao");
 		Session currentSession = sessionFactory.getCurrentSession();
-		Query theQuery = currentSession.createQuery("from User where login = '" + login + "'", User.class);
+		Query theQuery = currentSession.createQuery("from UserAccount where login = '" + login + "'", UserAccount.class);
 				// "and status = 'unlock' ", User.class);
 		//"from News where status = 'active'", News.class
-		User user = new User(); 
-		user =(User) theQuery.getSingleResult();
+		UserAccount user = new UserAccount(); 
+		user =(UserAccount) theQuery.getSingleResult();
 		return user;
 	}
 
 	@Override
-	public void createUser(User user) throws DAOException {
+	public void createUser(UserAccount user) throws DAOException {
 		Session currentSession = sessionFactory.getCurrentSession();
 		user.setDate(java.time.LocalDateTime.now());
 		currentSession.saveOrUpdate(user);
 	}
 
 	@Override
-	public List<User> all() throws DAOException {
+	public List<UserAccount> all() throws DAOException {
 		Session currentSession = sessionFactory.getCurrentSession();
-		Query<User> theQuery = currentSession.createQuery("from User", User.class);
-		List<User> users = theQuery.getResultList();
+		Query<UserAccount> theQuery = currentSession.createQuery("from UserAccount", UserAccount.class);
+		List<UserAccount> users = theQuery.getResultList();
 		return users;
 	}
 
 	@Override
-	public User getOne(int idUser) throws DAOException {
+	public UserAccount getOne(int idUser) throws DAOException {
 		Session currentSession = sessionFactory.getCurrentSession();
-		User user = currentSession.get(User.class, idUser);
+		UserAccount user = currentSession.get(UserAccount.class, idUser);
 		return user;
 	}
 
@@ -67,7 +67,7 @@ public class SQLUserDAO implements UserDAO {
 	public void updatePersonalInformation(int idUser, String name, String surname, String login,
 			String password, String role, Boolean status) throws DAOException {
 		Session currentSession = sessionFactory.getCurrentSession();
-		User user = new User();
+		UserAccount user = new UserAccount();
 		user.setIdUser(idUser);
 		user.setName(name);
 		user.setSurname(surname);

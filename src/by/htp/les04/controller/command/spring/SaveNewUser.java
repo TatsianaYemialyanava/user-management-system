@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import by.htp.les04.bean.User;
+import by.htp.les04.bean.UserAccount;
 import by.htp.les04.service.ServiceException;
 import by.htp.les04.service.UserService;
 import static by.htp.les04.controller.command.spring.ControllerLevelConstant.*;
@@ -20,7 +20,7 @@ public class SaveNewUser {
 	private UserService userService;
 
 	@RequestMapping(params = {"command=savenewuser"})
-	public String execute(@ModelAttribute("User") User user, Model theModel) throws ServletException, IOException, ServiceException {
+	public String execute(@ModelAttribute("User") UserAccount user, Model theModel) throws ServletException, IOException, ServiceException {
 		try {
 
 			System.out.println(user.toString());

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserCreationLoggingAspect {
 
-	@After("execution(public void by.htp.les04.service.impl.UserServiceImpl.createUser(by.htp.les04.bean.User)))")
+	@After("execution(public void by.htp.les04.service.impl.UserServiceImpl.createUser(by.htp.les04.bean.UserAccount)))")
 	public void afterCreateUserAdvice() {
 
 		System.out.println("\n==>>> Create user");	

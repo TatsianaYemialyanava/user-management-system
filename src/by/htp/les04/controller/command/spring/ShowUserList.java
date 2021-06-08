@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import by.htp.les04.bean.User;
+import by.htp.les04.bean.UserAccount;
 import by.htp.les04.service.ServiceException;
 import by.htp.les04.service.UserService;
 import static by.htp.les04.controller.command.spring.ControllerLevelConstant.*;
@@ -23,7 +23,7 @@ public class ShowUserList {
 	@RequestMapping(params = {"command=gotomainpage"})
 	public String execute(Model theModel, Principal principal) throws ServletException, IOException, ServiceException {
 
-		List<User> users = userService.takeAll();
+		List<UserAccount> users = userService.takeAll();
 		
 		theModel.addAttribute(USER_ATTRIBUTE, users);
 		

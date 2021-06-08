@@ -1,6 +1,6 @@
 package by.htp.les04.service.impl;
 
-import by.htp.les04.bean.User;
+import by.htp.les04.bean.UserAccount;
 import by.htp.les04.dao.DAOException;
 import by.htp.les04.dao.UserDAO;
 import by.htp.les04.service.ServiceException;
@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		System.out.println("loadUserByUsername dounload service");
-		User user = null;
+		UserAccount user = null;
 		try {
 			user = userDAO.loadUser(username);
 		}catch (DAOException e) {
@@ -44,14 +44,14 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 	}
 
 	@Override
-	public User authorization(String login, String password) throws ServiceException {
+	public UserAccount authorization(String login, String password) throws ServiceException {
 		System.out.println("authorization service");
 
 		if (!validateDataForAuthorisation(login, password)) {
 			throw new ServiceException("wrong login or password");
 		}
 
-		User user = null;
+		UserAccount user = null;
 		try {
 			user = userDAO.authorization(login, password);
 		}catch (DAOException e) {
@@ -61,7 +61,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 	}
 
 	@Override
-	public void createUser(User user) throws ServiceException {
+	public void createUser(UserAccount user) throws ServiceException {
 
 		String name = user.getName();
 		String surname = user.getSurname();
@@ -83,8 +83,8 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 	}
 
 	@Override
-	public List<User> takeAll() throws ServiceException  {
-		List<User> users;
+	public List<UserAccount> takeAll() throws ServiceException  {
+		List<UserAccount> users;
 
 		try {
 			users = userDAO.all();
@@ -95,8 +95,8 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 	}
 
 	@Override
-	public User getOne(int idUser) throws ServiceException {
-		User oneUser = null;
+	public UserAccount getOne(int idUser) throws ServiceException {
+		UserAccount oneUser = null;
 
 		try {
 			oneUser = userDAO.getOne(idUser);

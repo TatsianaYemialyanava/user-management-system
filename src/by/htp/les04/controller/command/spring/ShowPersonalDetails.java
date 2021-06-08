@@ -8,10 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import by.htp.les04.bean.User;
+import by.htp.les04.bean.UserAccount;
 import by.htp.les04.service.ServiceException;
 import by.htp.les04.service.UserService;
-
 import static by.htp.les04.controller.command.spring.ControllerLevelConstant.*;
 
 @Controller
@@ -22,9 +21,9 @@ public class ShowPersonalDetails {
 	private UserService userService;
 	
 	@RequestMapping(params = {"command=go_to_full_user_information_page"})
-	public String execute(@ModelAttribute("User") User user, Model theModel, Principal principal) throws ServletException, IOException, ServiceException {
+	public String execute(@ModelAttribute("User") UserAccount user, Model theModel, Principal principal) throws ServletException, IOException, ServiceException {
 		
-		User singleUser = userService.getOne(user.getIdUser());
+		UserAccount singleUser = userService.getOne(user.getIdUser());
 		
 		if (singleUser == null) {
 			theModel.addAttribute(MESSAGE, "An error has occurred. Wait a while and try again");
