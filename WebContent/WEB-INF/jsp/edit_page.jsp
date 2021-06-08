@@ -52,14 +52,14 @@ input[type=submit] {
 			Password: <br> 	<form:textarea path="password" rows="2" cols="100"></form:textarea> <br>
 			Role: <br> 		<form:textarea path="role" rows="2" cols="100"></form:textarea> <br>	
 				
-			<input type="submit" value="<spring:message code='editPageNews.button.save' />" class="save" />
+			<input type="submit" value="<spring:message code='editPageUser.button.save' />" class="save" />
 
 		</form:form>
 
 		<form action="Controller" method="get">
-			<input type="hidden" name="command" value="go_to_full_news_page" />
+			<input type="hidden" name="command" value="go_to_full_user_information_page" />
 			<input type="hidden" name="idUser" value="${param['idUser']}" />
-			<input type="submit" value="<spring:message code='editPageNews.button.cancel' />" />
+			<input type="submit" value="<spring:message code='editPageUser.button.cancel' />" />
 		</form>
 		<br />
 

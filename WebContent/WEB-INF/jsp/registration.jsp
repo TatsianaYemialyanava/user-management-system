@@ -78,7 +78,7 @@ input[type=submit] {
 		<div style=""></div>
 			<form action="Controller" method="get">
       		<input type="hidden" name="command" value="gotomainpage" />
-			<button><spring:message code="fullNews.button.backToMainPage" /></button>
+			<button><spring:message code="fullUser.button.backToMainPage" /></button>
 			</form>
 	</div>
 

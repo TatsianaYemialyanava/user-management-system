@@ -22,7 +22,7 @@ public class SaveEdittedInformation {
 	private UserService userService;
 
 	@RequestMapping(params = {"command=save_new_information"})
-	public String execute(@ModelAttribute("singleNews") User user, Model theModel, Principal principal) throws ServletException, IOException, ServiceException {
+	public String execute(@ModelAttribute("singleUser") User user, Model theModel, Principal principal) throws ServletException, IOException, ServiceException {
 
 		int idUser = user.getIdUser();
 		String name = user.getName();
@@ -35,6 +35,6 @@ public class SaveEdittedInformation {
 		userService.updatePersonalInformation(idUser, name, surname, email, login, password, role);
 		
 		theModel.addAttribute(MESSAGE, "user details has been saved");
-		return REDIRECT_PREFIX + REDIRECT_FROM_SAVE_EDDITED_INFORMATION_TO_GO_TO_FULL_NEWS_PAGE + idUser;
+		return REDIRECT_PREFIX + REDIRECT_FROM_SAVE_EDDITED_INFORMATION_TO_GO_TO_FULL_USER_INFORMATION_PAGE + idUser;
 	}
 }

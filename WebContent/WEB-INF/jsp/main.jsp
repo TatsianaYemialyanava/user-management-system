@@ -56,8 +56,8 @@
 								<c:out value="${n.surname}" />
 								<br />
 								<div align="right">
-									<a href="Controller?command=go_to_full_news_page&idUser=<c:out value="${n.idUser}"/>">
-										<spring:message code="main.fullNews" />
+									<a href="Controller?command=go_to_full_user_information_page&idUser=<c:out value="${n.idUser}"/>">
+										<spring:message code="main.fullUserDetails" />
 									</a>
 
 								</div>

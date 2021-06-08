@@ -21,7 +21,7 @@ public class GoToEditPage {
 	private UserService userService;
 
 	@RequestMapping(params = {"command=go_to_edit_page"})
-	public String execute(@ModelAttribute("News") User user, Model theModel, Principal principal) throws ServletException, IOException, ServiceException {
+	public String execute(@ModelAttribute("User") User user, Model theModel, Principal principal) throws ServletException, IOException, ServiceException {
 
 		User singleUser = userService.getOne(user.getIdUser());
 

@@ -7,7 +7,6 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import by.htp.les04.bean.News;
 import by.htp.les04.bean.User;
 import by.htp.les04.dao.DAOException;
 import by.htp.les04.dao.UserDAO;

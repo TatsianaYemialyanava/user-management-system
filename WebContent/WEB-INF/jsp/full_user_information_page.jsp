@@ -65,7 +65,7 @@
 					<form action="Controller" method="get">
 						<input type="hidden" name="command" value="gotomainpage" />
 						<button>
-							<spring:message code="fullNews.button.backToMainPage" />
+							<spring:message code="fullUser.button.backToMainPage" />
 						</button>
 					</form>
 				</td>
@@ -76,18 +76,9 @@
 							<input type="hidden" name="command" value="go_to_edit_page" /> <input
 								type="hidden" name="idUser" value="${param['idUser']}">
 							<button>
-								<spring:message code="fullNews.button.edit" />
+								<spring:message code="fullUser.button.edit" />
 							</button>
 						</form>
-					</td>
-					<td>
-						<!-- <form action="AdminController" method="get">
-							<input type="hidden" name="command" value="delete_news" /> <input
-								type="hidden" name="id" value="${param['idUser']}">
-							<button>
-								<spring:message code="fullNews.button.delete" />
-							</button>
-						</form> -->
 					</td>
 				</sec:authorize>
 			</tr>

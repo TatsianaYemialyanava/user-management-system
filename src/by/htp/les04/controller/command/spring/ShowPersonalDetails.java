@@ -21,8 +21,8 @@ public class ShowPersonalDetails {
 	@Autowired
 	private UserService userService;
 	
-	@RequestMapping(params = {"command=go_to_full_news_page"})
-	public String execute(@ModelAttribute("News") User user, Model theModel, Principal principal) throws ServletException, IOException, ServiceException {
+	@RequestMapping(params = {"command=go_to_full_user_information_page"})
+	public String execute(@ModelAttribute("User") User user, Model theModel, Principal principal) throws ServletException, IOException, ServiceException {
 		
 		User singleUser = userService.getOne(user.getIdUser());
 		
@@ -32,6 +32,6 @@ public class ShowPersonalDetails {
 		}
 		
 		theModel.addAttribute(SINGLE_USER_ATTRIBUTE, singleUser);
-		return REQUESTDISPATCHER_FROM_GO_TO_FULL_NEWS_PAGE_TO_FUII_NEWS_PAGE;
+		return REQUESTDISPATCHER_FROM_GO_TO_FULL_USER_INFORMATION_PAGE_TO_FUll_USER_INFORMATION_PAGE;
 	}
 }
