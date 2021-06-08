@@ -22,7 +22,6 @@ public class SQLUserDAO implements UserDAO {
 	public UserAccount authorization(String login, String password) throws DAOException {
 		Session currentSession = sessionFactory.getCurrentSession();
 		Query theQuery = currentSession.createQuery("from UserAccount where login = '" + login + "' and password = '" + password + "'", UserAccount.class);
-		//"from News where status = 'active'", News.class
 		System.out.println("kon");
 		UserAccount user = new UserAccount(); 
 		user =(UserAccount) theQuery.getSingleResult();
@@ -33,9 +32,7 @@ public class SQLUserDAO implements UserDAO {
 	public UserAccount loadUser(String login) throws DAOException {
 		System.out.println("load user dao");
 		Session currentSession = sessionFactory.getCurrentSession();
-		Query theQuery = currentSession.createQuery("from UserAccount where login = '" + login + "'", UserAccount.class);
-				// "and status = 'unlock' ", User.class);
-		//"from News where status = 'active'", News.class
+		Query theQuery = currentSession.createQuery("from UserAccount where login = '" + login + "' and status = false", UserAccount.class);
 		UserAccount user = new UserAccount(); 
 		user =(UserAccount) theQuery.getSingleResult();
 		return user;
