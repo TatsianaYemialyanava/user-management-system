@@ -43,7 +43,7 @@
 	<br />
 
 	<div align="center">
-		<c:set var="n" value='${requestScope["singleNews"]}' />
+		<c:set var="n" value='${requestScope["singleUser"]}' />
 		<hr />
 
 		Name: <c:out value="${n.name}" /> <br> 

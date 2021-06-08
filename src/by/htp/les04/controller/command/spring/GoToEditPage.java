@@ -30,7 +30,7 @@ public class GoToEditPage {
 			return REDIRECT_PREFIX + REDIRECT_TO_ERROR_PAGE;
 		}
 
-		theModel.addAttribute(SINGLE_NEWS_ATTRIBUTE, singleUser);
+		theModel.addAttribute(SINGLE_USER_ATTRIBUTE, singleUser);
 		return REQUESTDISPATCHER_FROM_GO_TO_EDIT_PAGE_TO_EDIT_PAGE;
 	}
 }

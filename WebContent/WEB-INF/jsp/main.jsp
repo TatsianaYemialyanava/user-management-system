@@ -48,7 +48,7 @@
 	<div align="center">
 
 		<table border="2">
-			<c:forEach var="n" items="${requestScope.news}">
+			<c:forEach var="n" items="${requestScope.users}">
 				<tr>
 					<td><font size="16" color="black" align="center"> 
 					<c:out value="${n.name}" />

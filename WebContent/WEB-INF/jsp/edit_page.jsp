@@ -42,7 +42,7 @@ input[type=submit] {
 	<br />
 
 	<div id="container" align="center" style="position: absolute; left: 150px; right: 150px;">
-		<form:form action="AdminController?command=save_new_information" modelAttribute="singleNews" method="POST">
+		<form:form action="AdminController?command=save_new_information" modelAttribute="singleUser" method="POST">
 			<form:hidden path="idUser" />
 
 			Name: <br>    	<form:textarea path="name" rows="2" cols="100"></form:textarea> <br>

@@ -25,7 +25,7 @@ public class ShowUserList {
 
 		List<User> users = userService.takeAll();
 		
-		theModel.addAttribute(NEWS_ATTRIBUTE, users);
+		theModel.addAttribute(USER_ATTRIBUTE, users);
 		
 		return REQUESTDISPATCHER_FROM_GO_TO_MAIN_PAGE_TO_MAIN;
 	}

@@ -31,7 +31,7 @@ public class ShowPersonalDetails {
 			return REDIRECT_PREFIX + REDIRECT_TO_ERROR_PAGE;
 		}
 		
-		theModel.addAttribute(SINGLE_NEWS_ATTRIBUTE, singleUser);
+		theModel.addAttribute(SINGLE_USER_ATTRIBUTE, singleUser);
 		return REQUESTDISPATCHER_FROM_GO_TO_FULL_NEWS_PAGE_TO_FUII_NEWS_PAGE;
 	}
 }
