@@ -22,6 +22,8 @@ public class SQLUserDAO implements UserDAO {
 	public User authorization(String login, String password) throws DAOException {
 		Session currentSession = sessionFactory.getCurrentSession();
 		Query theQuery = currentSession.createQuery("from User where login = '" + login + "' and password = '" + password + "'", User.class);
+		//"from News where status = 'active'", News.class
+		System.out.println("kon");
 		User user = new User(); 
 		user =(User) theQuery.getSingleResult();
 		return user;
@@ -29,8 +31,11 @@ public class SQLUserDAO implements UserDAO {
 
 	@Override
 	public User loadUser(String login) throws DAOException {
+		System.out.println("load user dao");
 		Session currentSession = sessionFactory.getCurrentSession();
 		Query theQuery = currentSession.createQuery("from User where login = '" + login + "'", User.class);
+				// "and status = 'unlock' ", User.class);
+		//"from News where status = 'active'", News.class
 		User user = new User(); 
 		user =(User) theQuery.getSingleResult();
 		return user;
@@ -60,7 +65,7 @@ public class SQLUserDAO implements UserDAO {
 
 	@Override
 	public void updatePersonalInformation(int idUser, String name, String surname, String login,
-			String password, String role) throws DAOException {
+			String password, String role, Boolean status) throws DAOException {
 		Session currentSession = sessionFactory.getCurrentSession();
 		User user = new User();
 		user.setIdUser(idUser);
@@ -69,8 +74,8 @@ public class SQLUserDAO implements UserDAO {
 		user.setLogin(login);
 		user.setPassword(password);
 		user.setRole(role);
-		//user.setDate(java.time.LocalDateTime.now());
-		//user.setStatus("active");
+		user.setStatus(status);
+		user.setDate(java.time.LocalDateTime.now());
 		currentSession.saveOrUpdate(user);
 	}
 }

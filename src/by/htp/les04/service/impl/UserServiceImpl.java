@@ -24,6 +24,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		System.out.println("loadUserByUsername dounload service");
 		User user = null;
 		try {
 			user = userDAO.loadUser(username);
@@ -44,6 +45,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
 	@Override
 	public User authorization(String login, String password) throws ServiceException {
+		System.out.println("authorization service");
 
 		if (!validateDataForAuthorisation(login, password)) {
 			throw new ServiceException("wrong login or password");
@@ -65,6 +67,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 		String surname = userInfo.getSurname();
 		String login = userInfo.getLogin();
 		String password = userInfo.getPassword();
+		
 
 		if (!validateDataForRegistration(name, surname, login, password)) {
 			throw new ServiceException("incorrect data entered");
@@ -104,9 +107,9 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
 	@Override
 	public void updatePersonalInformation(int idUser, String name, String surname, String login,
-			String password, String role) throws ServiceException {
+			String password, String role, Boolean status) throws ServiceException {
 		try {
-			userDAO.updatePersonalInformation(idUser, name, surname, login, password, role);
+			userDAO.updatePersonalInformation(idUser, name, surname, login, password, role, status);
 
 		}catch(DAOException e) {
 			throw new ServiceException(e.getMessage(), e);

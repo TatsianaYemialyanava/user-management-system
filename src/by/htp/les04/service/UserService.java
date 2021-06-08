@@ -14,5 +14,5 @@ public interface UserService {
 
 	User getOne(int idUser) throws ServiceException;
 
-	void updatePersonalInformation(int idUser, String name, String surname, String login, String password, String role) throws ServiceException;
+	void updatePersonalInformation(int idUser, String name, String surname, String login, String password, String role, Boolean status) throws ServiceException;
 }

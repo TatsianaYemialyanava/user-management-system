@@ -51,7 +51,16 @@
 		Login: <c:out value="${n.login}" /> <br> 
 		Password: <c:out value="${n.password}" /> <br> 
 		Role: <c:out value="${n.role}" /> <br> 
-		Date: <br>
+		Status:	<c:choose>
+   			 		<c:when test="${!n.status}">
+   				 		<c:out value="unlock"/>
+   		 			</c:when>
+   		  			<c:otherwise>
+    					<c:out value="lock"/>
+   			 		</c:otherwise>
+				</c:choose><br>
+		Date: <c:out value="${n.date}" /> <br>
+					
 		<hr />
 
 	</div>
