@@ -64,9 +64,21 @@ input[type=submit] {
 			<label><spring:message code="registration.password" />:</label><br>
 			<form:input path="password" />
 			<br>
-
-			<label></label>
+			
+			Role <br>: 
+				<form:select path="role">  
+     		    <form:option value="user" label="User"/>  
+       			<form:option value="admin" label="Admin"/>  
+       			</form:select>  <br><br>
+       		Status <br>:  
+       			<form:select path="status">  
+     		    <form:option value="true" label="Lock"/>  
+       			<form:option value="false" label="Unlock"/>  
+       			</form:select> <br><br>
+       				
+       		<label></label>
 			<input type="submit" value='<spring:message code="registration.button.save" />' class="save" />
+			<br>	
 
 		</form:form>
 	

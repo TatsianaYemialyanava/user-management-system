@@ -48,10 +48,19 @@ input[type=submit] {
 			Name: <br>    	<form:textarea path="name" rows="2" cols="100"></form:textarea> <br>
 			Surname: <br> 	<form:textarea path="surname" rows="2" cols="100"></form:textarea> <br>
 			Login: <br>		<form:textarea path="login" rows="2" cols="100"></form:textarea> <br>
-			Password: <br> 	<form:textarea path="password" rows="2" cols="100"></form:textarea> <br>
-			Role: <br> 		<form:textarea path="role" rows="2" cols="100"></form:textarea> <br>	
+			Password: <br> 	<form:textarea path="password" rows="2" cols="100"></form:textarea> <br>			
+			Role <br>: 
+				<form:select path="role">  
+     		    <form:option value="user" label="User"/>  
+       			<form:option value="admin" label="Admin"/>  
+       			</form:select>  <br>
+       		Status <br>:  
+       			<form:select path="status">  
+     		    <form:option value="true" label="Lock"/>  
+       			<form:option value="false" label="Unlock"/>  
+       			</form:select> <br>	
 				
-			<input type="submit" value="<spring:message code='editPageUser.button.save' />" class="save" />
+		<input type="submit" value="<spring:message code='editPageUser.button.save' />" class="save" />
 
 		</form:form>
 

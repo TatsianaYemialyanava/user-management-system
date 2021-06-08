@@ -61,12 +61,14 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 	}
 
 	@Override
-	public void createUser(User userInfo) throws ServiceException {
+	public void createUser(User user) throws ServiceException {
 
-		String name = userInfo.getName();
-		String surname = userInfo.getSurname();
-		String login = userInfo.getLogin();
-		String password = userInfo.getPassword();
+		String name = user.getName();
+		String surname = user.getSurname();
+		String login = user.getLogin();
+		String password = user.getPassword();
+		String role = user.getRole();
+		Boolean status = user.getStatus();
 		
 
 		if (!validateDataForRegistration(name, surname, login, password)) {
@@ -74,7 +76,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 		}
 
 		try {
-			userDAO.createUser(userInfo);
+			userDAO.createUser(user);
 		}catch (DAOException e) {
 			throw new ServiceException (e.getMessage(), e);
 		}

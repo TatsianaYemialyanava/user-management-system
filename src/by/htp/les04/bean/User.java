@@ -36,7 +36,7 @@ public class User implements Serializable {
 	@Column(name="role")
 	private String role;
 	
-	@Column(name="lock")
+	@Column(name="status")
 	private Boolean status;
 
 	@Column(name="date")

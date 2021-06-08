@@ -44,7 +44,7 @@ public class SQLUserDAO implements UserDAO {
 	@Override
 	public void createUser(User user) throws DAOException {
 		Session currentSession = sessionFactory.getCurrentSession();
-		user.setRole("user");
+		user.setDate(java.time.LocalDateTime.now());
 		currentSession.saveOrUpdate(user);
 	}
 
