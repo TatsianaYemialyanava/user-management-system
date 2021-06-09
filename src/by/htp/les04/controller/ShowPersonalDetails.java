@@ -31,6 +31,6 @@ public class ShowPersonalDetails {
 		}
 		
 		theModel.addAttribute(SINGLE_USER_ATTRIBUTE, singleUser);
-		return REQUESTDISPATCHER_FROM_GO_TO_FULL_USER_INFORMATION_PAGE_TO_FUll_USER_INFORMATION_PAGE;
+		return GO_TO_VIEW_PAGE;
 	}
 }

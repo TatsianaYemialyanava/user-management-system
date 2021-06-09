@@ -18,6 +18,6 @@ public class GoToRegistrationPage {
 		UserAccount user = new UserAccount();
 		theModel.addAttribute(USER, user);
 
-		return REQUESTDISPATCHER_FROM_GO_TO_REGISTRATION_PAGE_TO_REGISTRATION;
+		return GO_TO_NEW_PAGE;
 	}
 }

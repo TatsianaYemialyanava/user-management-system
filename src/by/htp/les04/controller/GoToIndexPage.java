@@ -19,6 +19,6 @@ public class GoToIndexPage {
 		
 		theModel.addAttribute(USER, user);
 		
-		return REQUESTDISPATCHER_FROM_GO_TO_INDEX_PAGE_TO_MAIN_INDEX;
+		return GO_TO_LOGIN_PAGE;
 	}
 }

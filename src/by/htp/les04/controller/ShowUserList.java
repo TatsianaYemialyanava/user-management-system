@@ -27,6 +27,6 @@ public class ShowUserList {
 		
 		theModel.addAttribute(USER_ATTRIBUTE, users);
 		
-		return REQUESTDISPATCHER_FROM_GO_TO_MAIN_PAGE_TO_MAIN;
+		return GO_TO_LIST_PAGE;
 	}
 }

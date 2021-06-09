@@ -33,6 +33,6 @@ public class GoToEditPage {
 		}
 
 		theModel.addAttribute(SINGLE_USER_ATTRIBUTE, singleUser);
-		return REQUESTDISPATCHER_FROM_GO_TO_EDIT_PAGE_TO_EDIT_PAGE;
+		return GO_TO_EDIT_PAGE;
 	}
 }

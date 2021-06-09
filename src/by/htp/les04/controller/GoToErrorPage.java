@@ -14,6 +14,6 @@ public class GoToErrorPage {
 	@RequestMapping("/error=true")
 	public String execute() throws ServletException, IOException, ServiceException {
 
-		return REQUESTDISPATCHER_FROM_GO_TO_ERROR_PAGE_TO_ERROR_PAGE;
+		return GO_TO_ERROR_PAGE;
 	}
 }

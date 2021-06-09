@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import by.htp.les04.bean.UserAccount;
 import by.htp.les04.service.ServiceException;
 import by.htp.les04.service.UserService;
