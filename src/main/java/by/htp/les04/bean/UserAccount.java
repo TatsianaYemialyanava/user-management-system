@@ -184,8 +184,7 @@ public class UserAccount implements Serializable {
 				"Surname:" + this.surname + "\n" +
 				"login: " + this.login + "\n" +
 				"password: ***" + "\n" + 
-				"role: " + this.role + "\n" +
-				"status: " + (this.status? "inactive": "active");
+				"role: " + this.role + "\n";
 	}
 
 	

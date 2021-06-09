@@ -3,8 +3,6 @@ package by.htp.les04.service;
 import by.htp.les04.bean.UserAccount;
 import by.htp.les04.dao.DAOException;
 import by.htp.les04.dao.UserDAO;
-import by.htp.les04.service.ServiceException;
-import by.htp.les04.service.UserService;
 import static by.htp.les04.service.validatorIncomingData.ValidationDataForAuthorisation.*;
 import static by.htp.les04.service.validatorIncomingData.ValidationDataForRegistration.*;
 import java.util.List;
@@ -20,7 +18,9 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
 	@Autowired
 	private UserDAO userDAO;
-
+	
+	public UserServiceImpl() {
+	}
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -69,7 +69,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 		String password = user.getPassword();
 		String role = user.getRole();
 		Boolean status = user.getStatus();
-		
+
 
 		if (!validateDataForRegistration(name, surname, login, password)) {
 			throw new ServiceException("incorrect data entered");
