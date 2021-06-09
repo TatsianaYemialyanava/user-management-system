@@ -28,11 +28,11 @@ public class SaveNewUser {
 
 			userService.createUser(user);
 			theModel.addAttribute(MESSAGE, "Registration completed successfully");
-			return REDIRECT_PREFIX + REDIRECT_FROM_SAVE_NEW_USER_TO_GO_TO_INDEX_PAGE;
+			return REDIRECT_PREFIX + REDIRECT_AFTER_SAVING_NEW_USER;
 			
 		} catch (ServiceException e) {
 			theModel.addAttribute(MESSAGE, e.getMessage());
-			return REDIRECT_PREFIX + REDIRECT_FROM_SAVE_NEW_USER_TO_REGISTRATION_PAGE;	
+			return REDIRECT_PREFIX + REDIRECT_ON_ERROR_WHENSAVING_NEW_USER;	
 		}
 	}
 }

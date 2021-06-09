@@ -38,6 +38,6 @@ public class SaveEdittedInformation {
 		userService.updatePersonalInformation(idUser, name, surname, login, password, role, status);
 		
 		theModel.addAttribute(MESSAGE, "user details has been saved");
-		return REDIRECT_PREFIX + REDIRECT_TO_FROM_SAVE_EDDITED_INFORMATION_TO_GO_TO_FULL_USER_INFORMATION_PAGE + idUser;
+		return REDIRECT_PREFIX + REDIRECT_AFTER_SAVING_NEW_USER_TO_VIEW_PAGE + idUser;
 	}
 }
