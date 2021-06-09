@@ -18,7 +18,7 @@
 	</div>
 	
 	<div align="left">
-		<form action="logout" method="POST">
+		<form action="${pageContext.request.contextPath}/logout" method="POST">
 			<a href="#" onclick="this.parentNode.submit()"><spring:message code="main.logout" /></a>
 			<sec:csrfInput/>
 		</form>
@@ -39,7 +39,7 @@
 	
 	<sec:authorize access="hasRole('admin')">
 		<div align="center">
-			<a href="AdminController?command=registration"><spring:message code="index.registration" /></a>	
+			<a href="${pageContext.request.contextPath}/AdminController/user/new"><spring:message code="index.registration" /></a>	
 		</div>
 	</sec:authorize>
 	
@@ -56,7 +56,7 @@
 								<c:out value="${n.surname}" />
 								<br />
 								<div align="right">
-									<a href="Controller?command=go_to_full_user_information_page&idUser=<c:out value="${n.idUser}"/>">
+									<a href="user/${n.idUser}">
 										<spring:message code="main.fullUserDetails" />
 									</a>
 

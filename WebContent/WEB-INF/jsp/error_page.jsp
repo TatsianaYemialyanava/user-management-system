@@ -33,7 +33,7 @@
 			<br />
 		</h1>
 
-		<a href="AnonymousController?command=gotoindexpage"> 
+		<a href="AnonymousController/login"> 
 			<spring:message code="exceptionPage.backToMainPage" />
 		</a>
 	</div>

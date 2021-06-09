@@ -70,8 +70,7 @@
 		<table>
 			<tr>
 				<td>
-					<form action="Controller" method="get">
-						<input type="hidden" name="command" value="gotomainpage" />
+					<form action="${pageContext.request.contextPath}/Controller/user" method="get">
 						<button>
 							<spring:message code="fullUser.button.backToMainPage" />
 						</button>
@@ -80,9 +79,7 @@
 
 				<sec:authorize access="hasRole('admin')">
 					<td>
-						<form action="AdminController" method="get">
-							<input type="hidden" name="command" value="go_to_edit_page" /> <input
-								type="hidden" name="idUser" value="${param['idUser']}">
+						<form action="${pageContext.request.contextPath}/AdminController/user/${n.idUser}/edit" method="get">
 							<button>
 								<spring:message code="fullUser.button.edit" />
 							</button>

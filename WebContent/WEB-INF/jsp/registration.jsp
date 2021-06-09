@@ -43,7 +43,7 @@ input[type=submit] {
 	<br />
 	<div id="container" align="center">
 
-		<form:form action="AdminController?command=savenewuser" modelAttribute="user" method="POST">
+		<form:form action="${pageContext.request.contextPath}/AdminController/user/new" modelAttribute="user" method="POST">
 			<form:hidden path="idUser" />
 
 			<label><spring:message code="registration.name" />:</label><br>
@@ -65,12 +65,12 @@ input[type=submit] {
 			<form:input path="password" />
 			<br>
 			
-			Role <br>: 
+			Role:  <br> 
 				<form:select path="role">  
      		    <form:option value="user" label="User"/>  
        			<form:option value="admin" label="Admin"/>  
        			</form:select>  <br><br>
-       		Status <br>:  
+       		Status: <br>  
        			<form:select path="status">  
      		    <form:option value="true" label="Inactive"/>  
        			<form:option value="false" label="Active"/>  
@@ -83,11 +83,12 @@ input[type=submit] {
 		</form:form>
 	
 		<div style=""></div>
-			<form action="Controller" method="get">
-      		<input type="hidden" name="command" value="gotomainpage" />
-			<button><spring:message code="fullUser.button.backToMainPage" /></button>
+			<form action="${pageContext.request.contextPath}/Controller/user" method="get">
+				<button>
+					<spring:message code="fullUser.button.backToMainPage" />
+				</button>
 			</form>
-	</div>
+		</div>
 
 </body>
 </html>

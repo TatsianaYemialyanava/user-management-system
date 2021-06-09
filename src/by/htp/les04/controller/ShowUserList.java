@@ -20,7 +20,7 @@ public class ShowUserList {
 	@Autowired
 	private UserService userService;
 
-	@RequestMapping(params = {"command=gotomainpage"})
+	@RequestMapping("/user")
 	public String execute(Model theModel, Principal principal) throws ServletException, IOException, ServiceException {
 
 		List<UserAccount> users = userService.takeAll();

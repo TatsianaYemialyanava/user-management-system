@@ -9,7 +9,7 @@
 </head>
 <body>
 
-     <c:redirect url="AnonymousController?command=gotoindexpage" />    			
+     <c:redirect url="AnonymousController/login" />   			
      
 </body>
 </html>

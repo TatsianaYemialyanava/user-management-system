@@ -20,7 +20,7 @@ public class ShowPersonalDetails {
 	@Autowired
 	private UserService userService;
 	
-	@RequestMapping(params = {"command=go_to_full_user_information_page"})
+	@RequestMapping(value = "/user/{idUser}")
 	public String execute(@ModelAttribute("User") UserAccount user, Model theModel, Principal principal) throws ServletException, IOException, ServiceException {
 		
 		UserAccount singleUser = userService.getOne(user.getIdUser());

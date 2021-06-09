@@ -40,9 +40,11 @@ input[type=submit] {
 	</c:if>
 
 	<br />
+	
+	<c:set var="n" value='${requestScope["singleUser"]}' />
 
 	<div id="container" align="center" style="position: absolute; left: 150px; right: 150px;">
-		<form:form action="AdminController?command=save_new_information" modelAttribute="singleUser" method="POST">
+		<form:form action="${pageContext.request.contextPath}/AdminController/user/${n.idUser}/edit" modelAttribute="singleUser" method="POST">
 			<form:hidden path="idUser" />
 
 			Name: <br>    	<form:textarea path="name" rows="2" cols="100"></form:textarea> <br>
@@ -64,10 +66,10 @@ input[type=submit] {
 
 		</form:form>
 
-		<form action="Controller" method="get">
-			<input type="hidden" name="command" value="go_to_full_user_information_page" />
-			<input type="hidden" name="idUser" value="${param['idUser']}" />
-			<input type="submit" value="<spring:message code='editPageUser.button.cancel' />" />
+		<form action="${pageContext.request.contextPath}/Controller/user/${n.idUser}" method="get">
+			<button>
+				<spring:message code='editPageUser.button.cancel' />
+			</button>
 		</form>
 		<br />
 

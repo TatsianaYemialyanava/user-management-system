@@ -13,7 +13,7 @@ import static by.htp.les04.controller.ControllerLevelConstant.*;
 @RequestMapping("/AdminController")
 public class GoToRegistrationPage {
 
-	@RequestMapping(params = {"command=registration"})
+	@RequestMapping("/user/new")
 	public String execute(Model theModel, Principal principal) throws ServletException, IOException {
 		UserAccount user = new UserAccount();
 		theModel.addAttribute(USER, user);

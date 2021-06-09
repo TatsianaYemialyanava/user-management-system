@@ -43,7 +43,7 @@ input[type=submit] {
 
 	<br />
 	
-	<form:form style="text-align: center" action="login" modelAttribute="user">	
+	<form:form style="text-align: center" action="${pageContext.request.contextPath}/login" modelAttribute="user">	
 	    <spring:message code="index.login" />: <br>
 		<form:input path="login" />
 		<br><br>

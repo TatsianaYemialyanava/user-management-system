@@ -12,7 +12,7 @@ import static by.htp.les04.controller.ControllerLevelConstant.*;
 @RequestMapping("/AnonymousController")
 public class GoToIndexPage {
 
-	@RequestMapping(params = {"command=gotoindexpage"})
+	@RequestMapping("/login")
 	public String execute(Model theModel, Principal principal) throws ServiceException {
 		
 		UserAccount user = new UserAccount();
