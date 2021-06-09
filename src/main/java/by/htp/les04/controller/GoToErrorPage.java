@@ -11,7 +11,7 @@ import static by.htp.les04.controller.ControllerLevelConstant.*;
 @RequestMapping(value={"/AnonymousController","/Controller","/AdminController"})
 public class GoToErrorPage {
 
-	@RequestMapping("/error=true")
+	@RequestMapping("/error")
 	public String execute() throws ServletException, IOException, ServiceException {
 
 		return GO_TO_ERROR_PAGE;

@@ -1,13 +1,6 @@
 package by.htp.les04.controller;
 
 public interface ControllerLevelConstant {
-	//PARAMS
-	//String ID_PARAM = "id";
-	//String COMMAND_REDIRECT_PARAM = "commandRedirect";
-	//String LOGIN_PARAM = "login";
-	//String PASSWORD_PARAM = "password";
-	//String NAME_PARAM = "name";
-	//String SURNAME_PARAM = "surname";
 	
 	//ATTRIBUTES
 	String SINGLE_USER_ATTRIBUTE = "singleUser";
@@ -18,9 +11,8 @@ public interface ControllerLevelConstant {
 	//PATHS
 	String REDIRECT_AFTER_SAVING_NEW_USER = "/Controller/user";	
 	String REDIRECT_ON_ERROR_WHENSAVING_NEW_USER = "Controller/user";
-	
 	String REDIRECT_AFTER_SAVING_NEW_USER_TO_VIEW_PAGE = "/Controller/user/";
-	String REDIRECT_TO_ERROR_PAGE = "AnonymousController?command=go_to_error_page";
+	String REDIRECT_TO_ERROR_PAGE = "AnonymousController/error";
 
 	String GO_TO_EDIT_PAGE = "edit";
 	String GO_TO_ERROR_PAGE = "error_page";

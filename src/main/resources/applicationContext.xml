@@ -83,7 +83,7 @@
 			password-parameter="password" 
 			default-target-url="/Controller/user" 
 			always-use-default-target="true" 
-			authentication-failure-url="/AnonymousController/login?command=gotoindexpage&amp;message=user%20not%20registered"
+			authentication-failure-url="/AnonymousController/login?error=1?&amp;message=user%20not%20registered"
 		/>
 		
 		<security:logout logout-url="/logout" logout-success-url="/AnonymousController/login" />
@@ -93,12 +93,17 @@
 		<security:intercept-url pattern="/**" access="permitAll" />
 	</security:http>
 	
-	<bean id="nooptEncoder" class="org.springframework.security.crypto.password.NoOpPasswordEncoder" />
- 	<security:authentication-manager>
-		<security:authentication-provider user-service-ref="userServiceImpl" >
-			<security:password-encoder ref="nooptEncoder"/>
-		</security:authentication-provider>
-	</security:authentication-manager>
+ <bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+ 
+	<bean id="authProvider" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+    <property name="userDetailsService" ref="userServiceImpl" />
+    <property name="passwordEncoder" ref="encoder" />
+  </bean>
+
+  
+	
+
+	
 	 
 </beans>
 
