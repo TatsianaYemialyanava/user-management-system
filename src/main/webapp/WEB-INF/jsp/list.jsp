@@ -46,23 +46,24 @@
 	<br>
 
 	<div align="center">
-
-		<table border="2">
+		
+		<table border="2" width="70%">
 			<c:forEach var="n" items="${requestScope.users}">
 				<tr>
-					<td><font size="16" color="black" align="center"> 
-					<c:out value="${n.name}" />
-							<div style="font-size: 40%">
-								<c:out value="${n.surname}" />
-								<br />
-								<div align="right">
-									<a href="user/${n.idUser}">
-										<spring:message code="main.fullUserDetails" />
-									</a>
+					<td>
+						<font size="6" color="black" align="left"> 
+							<c:out value="${n.name}" />
+							<c:out value="${n.surname}" />
+							</font>
+							<br />
+							<div align="right">
+								<a href="user/${n.idUser}">
+									<spring:message code="main.fullUserDetails" />
+								</a>
 
-								</div>
 							</div>
-					</font></td>
+						
+					</td>
 				</tr>
 			</c:forEach>
 		</table>

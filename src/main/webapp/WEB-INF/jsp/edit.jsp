@@ -10,19 +10,7 @@
 <title>Insert title here</title>
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/main_index.css" />
 <style>
-input[type=hidden] {
-	width: 20%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	box-sizing: border-box;
-	border: 2px solid brown;
-	border-radius: 4px;
-}
-input[type=submit] {
-	border: 2px solid brown;
-	padding: 10px;
-	border-radius: 25px;
-}
+
 </style>
 
 </head>
@@ -47,24 +35,26 @@ input[type=submit] {
 		<form:form action="${pageContext.request.contextPath}/AdminController/user/${n.idUser}/edit" modelAttribute="singleUser" method="POST">
 			<form:hidden path="idUser" />
 
-			Name: <br>    	<form:textarea path="name" rows="2" cols="100"></form:textarea> <br>
-			Surname: <br> 	<form:textarea path="surname" rows="2" cols="100"></form:textarea> <br>
-			Login: <br>		<form:textarea path="login" rows="2" cols="100"></form:textarea> <br>
-			Password: <br> 	<form:textarea path="password" rows="2" cols="100"></form:textarea> <br>			
+			Name: <br>    	<form:textarea path="name" rows="2" cols="100"></form:textarea> <br><br>
+			Surname: <br> 	<form:textarea path="surname" rows="2" cols="100"></form:textarea> <br><br>
+			Login: <br>		<form:textarea path="login" rows="2" cols="100"></form:textarea> <br><br>
+			Password: <br> 	<form:textarea path="password" rows="2" cols="100"></form:textarea> <br><br>			
 			Role <br>: 
 				<form:select path="role">  
      		    <form:option value="user" label="User"/>  
        			<form:option value="admin" label="Admin"/>  
-       			</form:select>  <br>
+       			</form:select>  <br><br>
        		Status <br>:  
        			<form:select path="status">  
      		    <form:option value="true" label="Inactive"/>  
        			<form:option value="false" label="Active"/>  
-       			</form:select> <br>	
+       			</form:select> <br><br>	
 				
 		<input type="submit" value="<spring:message code='editPageUser.button.save' />" class="save" />
 
 		</form:form>
+		
+		<br>
 
 		<form action="${pageContext.request.contextPath}/Controller/user/${n.idUser}" method="get">
 			<button>

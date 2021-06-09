@@ -25,6 +25,7 @@ input[type=submit] {
 	padding: 10px;
 	border-radius: 15px;
 }
+
 </style>
 
 </head>
