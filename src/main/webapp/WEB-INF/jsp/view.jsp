@@ -18,7 +18,7 @@
 	</div>
 
 	<div align="left">
-		<form action="logout" method="POST">
+		<form action="${pageContext.request.contextPath}/logout" method="POST">
 			<a href="#" onclick="this.parentNode.submit()"><spring:message
 					code="main.logout" /></a>
 			<sec:csrfInput />

@@ -32,7 +32,7 @@ CREATE TABLE `users` (
   `status` tinyint NOT NULL DEFAULT '0',
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Tanya','Semenovich','tanch','$2a$10$PSSu1v0kPwSBEfrHewwfQOm0GNeim4FU70PNciYiP0/VLfiU.HEty','admin',0,'2021-06-09 18:17:46'),(56,'Olekca','Garbacevich','romantica','$2a$10$YMugc2zNFMqI3p7HbzKUG.lPiaCWrpgBMf22BpHr/Blj7xO72oSfq','user',0,'2021-06-09 18:57:03'),(57,'Peter','Penn','lazovic','$2a$10$hQwMLMIlKuEcmPgDS5WMEOVasqHPOsknLtmTaZWpSHJ09pnkV1SpS','user',1,'2021-06-09 20:28:47'),(58,'Pavlik','Morozov','ludshiDrug','$2a$10$W/7ojpBxX64tVepSi3b2F.A0zlEA7oC1AKV6mQS1QMIJtesHe6BRK','user',0,'2021-06-09 20:55:38');
+INSERT INTO `users` VALUES (1,'Tanya','Semenovich','tanch','$2a$10$rrkm744VaN5tbicObh/B1.K3CY7puCE7z6RyHs4jtDJtv0QR85czW','admin',0,'2021-06-09 18:17:46'),(56,'Olekca','Garbacevich','romantica','$2a$10$YMugc2zNFMqI3p7HbzKUG.lPiaCWrpgBMf22BpHr/Blj7xO72oSfq','user',0,'2021-06-09 18:57:03'),(57,'Peter','Penn','lazovic','$2a$10$hQwMLMIlKuEcmPgDS5WMEOVasqHPOsknLtmTaZWpSHJ09pnkV1SpS','user',1,'2021-06-09 20:28:47'),(58,'Pavlik','Morozov','ludshiDrug','$2a$10$W/7ojpBxX64tVepSi3b2F.A0zlEA7oC1AKV6mQS1QMIJtesHe6BRK','user',0,'2021-06-09 20:55:38'),(59,'Vladzimir','Wolfson','voladimirQ','$2a$10$D8JY56erxJL0IPkvgtM.TOCVQCRlrhYTnWN8/R/TI6n2Vz2xYRokO','user',0,'2021-06-10 08:16:27');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -81,4 +81,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-10  9:29:35
+-- Dump completed on 2021-06-10 11:36:29
