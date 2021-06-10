@@ -4,10 +4,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ValidationDataForRegistration {
-	private static Pattern patternN = Pattern.compile("[A-Za-zА-ЯЁёа-я]+");
-	private static Pattern patternS = Pattern.compile("[A-Za-zА-ЯЁёа-я]+");
-	private static Pattern patternL = Pattern.compile("[A-Za-z1-9!\\.?_]+");
-	private static Pattern patternP = Pattern.compile("[-A-Za-z1-9!@#$%^&*()]+");
+	private static Pattern patternN = Pattern.compile("[A-Za-z]{1,16}+");
+	private static Pattern patternS = Pattern.compile("[A-Za-z]{1,16}+");
+	private static Pattern patternL = Pattern.compile("[A-Za-z]{3,16}+");
+	private static Pattern patternP = Pattern.compile("[A-Za-z0-9]{3,16}+");
 
 	public static boolean validateDataForRegistration(String name, String surname, String login, String password) {
 
