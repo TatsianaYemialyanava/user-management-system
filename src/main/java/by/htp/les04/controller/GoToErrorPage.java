@@ -8,7 +8,7 @@ import by.htp.les04.service.ServiceException;
 import static by.htp.les04.controller.ControllerLevelConstant.*;
 
 @Controller
-@RequestMapping(value={"/AnonymousController","/Controller","/AdminController"})
+@RequestMapping("/AnonymousController")
 public class GoToErrorPage {
 
 	@RequestMapping("/error")

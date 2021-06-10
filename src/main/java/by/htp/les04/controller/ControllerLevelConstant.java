@@ -10,9 +10,9 @@ public interface ControllerLevelConstant {
 	
 	//PATHS
 	String REDIRECT_AFTER_SAVING_NEW_USER = "/Controller/user";	
-	String REDIRECT_ON_ERROR_WHENSAVING_NEW_USER = "Controller/user";
+	String REDIRECT_ON_ERROR_WHENSAVING_NEW_USER = "/AdminController/user/new";
 	String REDIRECT_AFTER_SAVING_NEW_USER_TO_VIEW_PAGE = "/Controller/user/";
-	String REDIRECT_TO_ERROR_PAGE = "AnonymousController/error";
+	String REDIRECT_TO_ERROR_PAGE = "/AnonymousController/error";
 
 	String GO_TO_EDIT_PAGE = "edit";
 	String GO_TO_ERROR_PAGE = "error_page";
